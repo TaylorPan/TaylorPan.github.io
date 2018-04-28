@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Dushi</title>
+  <link rel="stylesheet" href="css/init.css">
+  <link rel="stylesheet" href="css/Dushi.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="js/jquery-1.10.1.min.js"></script>
+  <script>
+    $(function(){
+      //监听页面滚动事件
+      var length = $("#nav").offset().top;
+      var height = $('#nav').outerHeight();
+      var tooltop = $('#tool').offset().top;
+      var lifetop = $('#life').offset().top;
+      var sevicetop = $("#sevice").offset().top;
+      console.log(height);
+      $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+//        console.log(scrollTop);
+        if(scrollTop >= length){
+            $('#nav').addClass('fixed');
+            $('#sub').css('marginTop','72px');
+          $('#menu li:eq(0)').addClass('active').siblings().removeClass('active');
+//          $('#bannertxt').css('marginBottom','72px');
+            if(scrollTop >=tooltop&&scrollTop <=lifetop){
+
+              $('#menu li:eq(0)').addClass('active').siblings().removeClass('active');
+            };
+          if(scrollTop >lifetop&&scrollTop <sevicetop){
+            $('#menu li:eq(1)').addClass('active').siblings().removeClass('active');
+          };
+          if(scrollTop >=sevicetop){
+            $('#menu li:eq(2)').addClass('active').siblings().removeClass('active');
+          }
+
+
+        }else{
+          $('#nav').removeClass('fixed');
+          $('#sub').css('marginTop',0);
+          $('#menu li').removeClass('active');
+//          $('#bannertxt').css('marginBottom',0);
+        }
+      })
+      $('#menu li').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+      })
+    })
+  </script>
+</head>
+<body>
+<div class="header">
+  <div class="w">
+    <h2>Dushi</h2>
+  </div>
+</div>
+<div class="bannerbox">
+</div>
+<div id="bannertxt" class="bannertxt w">
+  <h2>Dushi</h2>
+  <h3>NANO FIBERS</h3>
+  <p  id="textm"class="textm">Easy to remove tough baked on messes, oil, dirt and it dries very quickly <br>
+    Dushi 6 Piece Nano Fiber Scratch Free Dish Scrubber Scourer Assorted Colors<br>
+    Polyester fabrics and nano fibers are incredibly strong, durable and resistant to most chemicals </p>
+</div>
+<div id="nav"class="nav">
+  <ul id="menu" class="w">
+    <li  class="active"><a href="#tool">POWERFER TOOLS</a></li>
+    <li ><a href="#life">ENRICH YOUR LIFE</a></li>
+    <li ><a href="#sevice"> INTIMATE SERVICE</a></li>
+  </ul>
+</div>
+<!--tool-->
+<div class="tool" id="tool">
+<div id="sub" class="sub">
+  <h2>ECONOMICAL AND DURABLE</h2>
+  <p>6 pack colorful heavy duty super scouring scrub cleaning sponge,these plastic mesh pot scourers will be absolutely perfect for you</p>
+</div>
+<div class="use">
+  <h2>DURABLE ENOUGH FOR DAILY USE</h2>
+  <p>Polyester fabrics and nano fibers are incredibly strong, durable and resistant to most chemicals,Protect Your Family From Dirt And Bacteria</p>
+</div>
+</div>
+<div class="life" id="life">
+<div class="video">
+  <h2> NON-SCRATCH</h2>
+  <p>While these scrubbers are tough enough to shift difficult dirt and grease,<br> they are also soft enough to deal with expensive non-stick cookware.
+  <br>They won’t scratch or damage your pots and pans, no matter how hard you scrub. </p>
+
+</div>
+<div class="song">
+  <h2> SAFER THAN SPONGES</h2>
+  <p>Dish sponges are a fertile breeding ground for bacteria and germs.<br> You’re just spreading around the dirt every time you use them. <br>These dish scrubbers are sanitary and safe. You can even clean them in the dishwasher when you’re done!</p>
+</div>
+<div class="story">
+  <div class="animate"></div>
+  <h2>100% MONEY BACK GUARANTEE</h2>
+  <p>If you aren’t completely satisfied with these dish scrubbers,<br> then we’ll be happy to give you every penny of your money back.
+  We stand behind our high quality products.</p>
+  <div class="pic"><img src="images/miui_show_20.png" alt=""></div>
+</div>
+</div>
+<div class="sevice" id="sevice">
+<!--sevice-->
+<div class="internet">
+  <div class="w">
+    <div class="left"></div>
+    <div class="right">
+      <h2> Our Service Promise</h2>
+      <p>Our mission is to exceed your expectations and inspire you with the high quality of our products.
+        When you order this item, Usually arrive in 5-10 days,If you have any questions about product and logistics,please contact us. We will follow up within 24 hours and try our best to solve your problem,which is highly appreciated and welcome  <br>and we also welcome you to share your comments.</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="fixcontent">
+  <div class="weibo">
+    <img src="images/miui_show_229.png" alt="">
+  </div>
+  <div class="weixin">
+    <img src="images/miui_show_230.png" alt="">
+  </div>
+  <div id="divtop"></div>
+</div>
+<div class="footerbox">
+  <div class="footer w clearfix">
+    <ul class="footernav">
+      <li><a href="#">Sina Weibo</a></li>
+      <li class="line">|</li>
+      <li class="chat">
+        <a href="#">Official micro-letters</a>
+      </li>
+      <li class="line">|</li>
+      <li><a href="#">Official paste</a></li>
+      <li class="line">|</li>
+      <li><a href="#">Global Fan Station</a></li>
+      <li class="line">|</li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li class="line">|</li>
+      <li><a href="#">Preset application queries</a></li>
+      <li class="line">|</li>
+      <li class="lang">
+        <a href="#">Chinese Simplified</a>
+      </li>
+    </ul>
+    <p>Copyright © 2017 Dushi BeiJingICPPreparation10046444th | Beijing Public net ICP No. 11,010,802,020,134th | Beijing ICP Certificate No. 110,507th</p>
+  </div>
+</div>
+<script>
+  var divtop = document.getElementById("divtop");
+  var id;
+  divtop.onclick = function(){
+    clearInterval(id);
+    id = setInterval(function(){
+      var step = 100;
+
+      if( document.documentElement.scrollTop <= 0){
+        document.documentElement.scrollTop = 0;
+        clearInterval(id);
+      }
+      document.documentElement.scrollTop -= step;
+    },20)
+  }
+//  var example1=new sHover("bannertxt","textm");
+</script>
+</body>
+</html>
